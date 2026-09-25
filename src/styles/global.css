@@ -1,0 +1,70 @@
+@import "tailwindcss";
+
+/* Tokens del sistema de diseño AROMATO.
+   La página usa a propósito el tema oscuro de marca, por eso los tokens
+   semánticos ya apuntan a sus valores oscuros. */
+@theme {
+  /* Paleta */
+  --color-midnight: #0B1F3A;
+  --color-deep: #061428;
+  --color-gold: #C9A227;
+  --color-sand: #F4EFE6;
+  --color-smoke-pale: #A9B4C2;
+
+  /* Roles */
+  --color-surface: var(--color-deep);
+  --color-surface-secondary: var(--color-midnight);
+  --color-surface-inverse: var(--color-sand);
+  --color-ink: #FFFFFF;
+  --color-ink-secondary: var(--color-smoke-pale);
+  --color-ink-on-inverse: var(--color-midnight);
+  --color-accent-gold: var(--color-gold);
+  --color-border-gold: var(--color-gold);
+  --color-border-hairline: rgba(244, 239, 230, 0.16);
+  --color-focus-ring: var(--color-gold);
+
+  /* Tipografía */
+  --font-sans: "Poppins", "Helvetica Neue", Arial, sans-serif;
+  --font-serif: "Lora", Georgia, "Times New Roman", serif;
+
+  /* Radios */
+  --radius-2: 2px;
+
+  /* Sombra (tema oscuro) */
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.35), 0 12px 28px rgba(0, 0, 0, 0.45);
+}
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-surface text-ink font-sans antialiased;
+    background-image: radial-gradient(ellipse 120% 70% at 50% 0%, var(--color-midnight) 0%, var(--color-deep) 70%);
+    background-attachment: fixed;
+  }
+}
+
+/* Estilos tipográficos del sistema */
+@utility button-label {
+  font-size: 13px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+@utility caption {
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.02em;
+}
+
+@utility overline {
+  font-size: 11px;
+  line-height: 16px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}

@@ -1,0 +1,33 @@
+---
+// Botón de enlace. Primario: una sola acción por vista (el catálogo).
+// El oro no se usa en botones, según el sistema de diseño.
+import Icon from './Icon.astro';
+import type { LinkItem } from '../data/links';
+
+type Props = LinkItem;
+const { label, href, icon, variant, hint } = Astro.props;
+
+const variants = {
+  primary: 'bg-surface-inverse text-ink-on-inverse hover:opacity-90',
+  secondary: 'border-[1.5px] border-ink text-ink hover:bg-surface-secondary',
+};
+---
+
+<li>
+  <a
+    href={href}
+    target="_blank"
+    rel="noopener"
+    class:list={[
+      'button-label grid grid-cols-[24px_1fr_24px] items-center gap-2 rounded-2 px-6 py-4',
+      'transition-[opacity,background-color] duration-150 motion-reduce:transition-none',
+      'focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus-ring',
+      variants[variant],
+    ]}
+  >
+    <Icon name={icon} />
+    <span class="text-center">{label}</span>
+    <span aria-hidden="true"></span>
+  </a>
+  {hint && <span class="caption mt-2 block text-ink-secondary">{hint}</span>}
+</li>

@@ -1,0 +1,22 @@
+---
+// Isotipo AROMATO: gota con facetas de diamante. Solo línea, sin relleno.
+interface Props {
+  class?: string;
+  color?: string;
+}
+const { class: className, color = '#FFFFFF' } = Astro.props;
+---
+
+<svg class={className} viewBox="0 0 100 100" role="img" aria-label="Isotipo de AROMATO">
+  <g fill="none" stroke={color} stroke-linecap="round" stroke-linejoin="round">
+    <path stroke-width="4.6" d="M50,8 C50,8 30,32 30,52 A24,24 0 0,0 70,52 C70,32 50,8 50,8 Z"></path>
+    <g stroke-width="3.8">
+      <line x1="43" y1="25" x2="57" y2="25"></line>
+      <line x1="43" y1="25" x2="30" y2="52"></line>
+      <line x1="57" y1="25" x2="70" y2="52"></line>
+      <line x1="30" y1="52" x2="70" y2="52"></line>
+      <line x1="30" y1="52" x2="50" y2="63"></line>
+      <line x1="70" y1="52" x2="50" y2="63"></line>
+    </g>
+  </g>
+</svg>

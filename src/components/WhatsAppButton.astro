@@ -1,0 +1,24 @@
+---
+// Botón flotante de WhatsApp, fijo en la esquina inferior derecha.
+import Icon from './Icon.astro';
+import { whatsapp } from '../data/links';
+
+const href = `https://wa.me/${whatsapp.phone}?text=${encodeURIComponent(whatsapp.message)}`;
+---
+
+<a
+  href={href}
+  target="_blank"
+  rel="noopener"
+  aria-label="Escríbenos por WhatsApp"
+  class:list={[
+    'button-label fixed z-10 flex items-center gap-2 rounded-2 px-4 py-3',
+    'right-[calc(1rem+env(safe-area-inset-right,0px))] bottom-[calc(1rem+env(safe-area-inset-bottom,0px))]',
+    'border-[1.5px] border-ink bg-surface-secondary text-ink shadow-card',
+    'transition-colors duration-150 hover:bg-deep motion-reduce:transition-none',
+    'focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus-ring',
+  ]}
+>
+  <Icon name="whatsapp" />
+  <span>WhatsApp</span>
+</a>
