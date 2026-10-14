@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import Isotipo from '../components/Isotipo.astro';
+---
+
+<Base title="Página no encontrada · AROMATO" description="Esta página no existe. Vuelve a los enlaces de AROMATO.">
+  <main class="mx-auto flex max-w-[420px] flex-col items-center text-center">
+    <Isotipo class="size-12" />
+    <p class="eyebrow mt-8 text-accent-gold">Error 404</p>
+    <h1 class="mt-3 text-[24px] leading-8 font-medium text-balance">Esta página no existe</h1>
+    <p class="mt-3 font-serif italic text-balance text-ink-secondary">El enlace que seguiste está roto o cambió de lugar.</p>
+    <a
+      href="/"
+      class="button-label mt-10 rounded-2 border-[1.5px] border-ink px-6 py-4 transition-[background-color,translate] duration-200 hover:bg-surface-secondary focus-visible:outline-2 focus-visible:outline-offset-3 focus-visible:outline-focus-ring active:translate-y-px motion-reduce:transition-none"
+    >
+      Volver a los enlaces
+    </a>
+  </main>
+</Base>
