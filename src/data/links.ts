@@ -20,7 +20,7 @@ export const whatsapp = {
 export const links: LinkItem[] = [
   {
     label: 'Ver catálogo',
-    href: 'https://aromato-catalogo.vercel.app/',
+    href: 'https://aromato.co/',
     icon: 'catalog',
     variant: 'primary',
     hint: 'Fragancias árabes, de diseñador y nicho',
