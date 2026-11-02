@@ -12,8 +12,7 @@ export interface LinkItem {
 
 export const whatsapp = {
   // Número con indicativo, solo dígitos (ej. 573001234567).
-  // PENDIENTE: mientras esté vacío, el botón de WhatsApp no se muestra.
-  phone: '',
+  phone: '573239039901',
   message: 'Hola AROMATO, quiero información sobre una fragancia.',
 };
 
